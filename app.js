@@ -6,6 +6,11 @@ $(window).load(function () {
     var srclater = $(this).attr('srclater');
     $(this).attr('src', srclater);
   });
+
+  var hash = window.location.hash.replace('#', '');
+  if (hash.length > 0) {
+    showOnly(hash);
+  }
 });
 
 function showOnly(className) {
@@ -17,28 +22,10 @@ function showOnly(className) {
 
   // highlight the selected
   $('.menu a').removeClass('selected');
-  $('#' + className).addClass('selected');
+  $('#' + className + 'id').addClass('selected');
+
+  window.location.hash = className;
 
   // collapse the menu
-  $(".menu-btn").attr('checked', false);
+  $('.menu-btn').attr('checked', false);
 }
-
-$('#fashion').click(function () {
-  showOnly('fashion');
-});
-
-$('#music').click(function () {
-  showOnly('music');
-});
-
-$('#photo').click(function () {
-  showOnly('photo');
-});
-
-$('#video').click(function () {
-  showOnly('video');
-});
-
-$('#interviews').click(function () {
-  showOnly('interviews');
-});

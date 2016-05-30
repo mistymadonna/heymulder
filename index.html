@@ -28,11 +28,13 @@
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
-                <li><a id="fashion">Fashion</a></li>
-                <li><a id="video">Video</a></li>
-                <li><a id="music">Music</a></li>
-                <li><a id="photo">Photo</a></li>
-                <li><a id="interviews">Interviews</a></li>
+                <!-- have to use "fashionid" instead of "fashion" because of this bug: the browser
+                will navigate to the element when window.location.hash == the id -->
+                <li><a id="fashionid" onclick="showOnly('fashion')">Fashion</a></li>
+                <li><a id="videoid" onclick="showOnly('video')">Video</a></li>
+                <li><a id="musicid" onclick="showOnly('music')">Music</a></li>
+                <li><a id="photoid" onclick="showOnly('photo')">Photo</a></li>
+                <li><a id="interviewid" onclick="showOnly('interview')">Interviews</a></li>
                 <li><a data-toggle="modal" data-target="#myModal">About</a></li>
             </ul>
             <div class="social-media">
@@ -56,9 +58,9 @@
         <img class="fashion" src="uploads/2015/12/90sfashion2.jpg" />
         <iframe class="music" srclater="http://8tracks.com/mixes/7612880/player_v3_universal" height="540" style="border: 0px none;"></iframe>
         <iframe class="video" height="540" srclater="https://www.youtube.com/embed/93uS4Mqm86o" frameborder="0" allowfullscreen></iframe>
-        <iframe class="interviews video" height="540" srclater="https://www.youtube.com/embed/N42m3Pk5u54" frameborder="0" allowfullscreen></iframe>
-        <iframe class="interviews video" height="540" srclater="https://www.youtube.com/embed/niAqCOrlDtM" frameborder="0" allowfullscreen></iframe>
-        <iframe class="interviews video" height="540" srclater="https://www.youtube.com/embed/qyzqY2wVJaw" frameborder="0" allowfullscreen></iframe>
+        <iframe class="interview video" height="540" srclater="https://www.youtube.com/embed/N42m3Pk5u54" frameborder="0" allowfullscreen></iframe>
+        <iframe class="interview video" height="540" srclater="https://www.youtube.com/embed/niAqCOrlDtM" frameborder="0" allowfullscreen></iframe>
+        <iframe class="interview video" height="540" srclater="https://www.youtube.com/embed/qyzqY2wVJaw" frameborder="0" allowfullscreen></iframe>
 
         <!-- Modal - as long as it's in the page, doesn't matter where-->
         <div class="modal fade" id="myModal" role="dialog">
