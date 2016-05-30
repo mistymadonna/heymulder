@@ -14,6 +14,9 @@ function showOnly(className) {
 
   // show all the ones we want
   $('.' + className).show();
+
+  // collapse the menu
+  $(".menu-btn").attr('checked', false);
 }
 
 $('#fashion').click(function () {
