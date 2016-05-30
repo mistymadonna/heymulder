@@ -82,6 +82,8 @@ header {
           text-decoration: none; }
           header .inner .menu li a:hover {
             background-color: #6CF643; }
+        header .inner .menu li a.selected {
+          background-color: #6CF643; }
 
 main {
   max-width: 960px;

@@ -15,6 +15,10 @@ function showOnly(className) {
   // show all the ones we want
   $('.' + className).show();
 
+  // highlight the selected
+  $('.menu a').removeClass('selected');
+  $('#' + className).addClass('selected');
+
   // collapse the menu
   $(".menu-btn").attr('checked', false);
 }
