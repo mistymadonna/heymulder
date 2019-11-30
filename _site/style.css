@@ -81,9 +81,9 @@ header {
           padding: 27px 15px;
           text-decoration: none; }
           header .inner .menu li a:hover {
-            background-color: #6CF643; }
+            background-color: #F8B7CB; }
         header .inner .menu li a.selected {
-          background-color: #6CF643; }
+          background-color: #F8B7CB; }
 
 main {
   max-width: 960px;
